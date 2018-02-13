@@ -32,12 +32,12 @@ body {
 h1 {
   color: white;
   font-family: 'Kaushan Script', cursive;
-  font-size: 5em;
+  font-size: 4.5em;
   margin: 0;
   animation-name: glow;
   animation-duration: 6s;
   animation-iteration-count: infinite;
-  z-index: 2;
+  z-index: 10;
 }
 
 @keyframes glow {
@@ -57,5 +57,5 @@ h1 {
   flex-direction: column;
   z-index: 0; 
   animation: stars 21s ease; 
-  transform-style: preserve-3d;
+  overflow: hidden;
 }
