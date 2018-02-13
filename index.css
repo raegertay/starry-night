@@ -1,0 +1,61 @@
+body {
+  background: black;
+  overflow: hidden;
+}
+
+.star {
+  border-radius: 50%;
+  background: radial-gradient(circle at center, white, lightblue);
+  position: absolute;
+}
+
+.shining {
+  animation-name: shining;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+.shining-delay-2 {
+  animation-delay: 2s
+}
+
+.shining-delay-4 {
+  animation-delay: 4s
+}
+
+@keyframes shining {
+  0% { box-shadow: 0;}
+  50% { box-shadow: 0 0 1px 1px white; }
+  100% { box-shadow: 0; }
+}
+
+h1 {
+  color: white;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 5em;
+  margin: 0;
+  animation-name: glow;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  z-index: 2;
+}
+
+@keyframes glow {
+  0% {color: white;}
+  50% {
+    color: pink; 
+    text-shadow: 0 0 1em pink;
+  }
+  100% {color: white;}
+}
+
+.stars {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 0; 
+  animation: stars 21s ease; 
+  transform-style: preserve-3d;
+}
