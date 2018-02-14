@@ -144,18 +144,18 @@ $(document).ready(function () {
   for (let i = 0; i < 150; i++) {
     let star = document.createElement('div')
     star.classList.add('star')
-    if (Math.random() > 0.7) {
+    if (Math.random() > 0.3) {
       star.classList.add('shining')
-      if (Math.random() > 0.3) {
+      if (Math.random() > 0.5) {
         star.classList.add('shining-delay-2')
       }
-      if (Math.random() > 0.3) {
+      if (Math.random() > 0.5) {
         star.classList.add('shining-delay-4')
       }
     }
 
     star.style.width = (Math.random() * 3) + 'px'
-    star.style.height = (Math.random() * 3) + 'px'
+    star.style.height = star.style.width
     star.style.left = (Math.random() * body.offsetWidth) + 'px'
     star.style.top = (Math.random() * body.offsetHeight) + 'px'
     body.appendChild(star)
